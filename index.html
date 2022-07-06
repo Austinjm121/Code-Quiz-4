@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- This is font links -->
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<!-- This is the style links -->
+		<link rel="stylesheet" type="text/css" href="./assets/style/style.css">
+		<!-- This is the title-->
+		<title>Code Quiz</title>
+	</head>
+	<body>
+		<!-- Link to highscores -->
+		<a href="./highscore.html">View Highscores</a>
+		<!-- Casing holds the contents of the quiz inside of it in a neat rectangle -->
+		<section id="casing">
+			<!-- Section for timer in top right corner -->
+			<section id="currentTime"></section>
+			<!-- Section for quiz content -->
+			<section id="questionsSection">
+				<h1>Coding Quiz Challenge</h1>
+				<p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+					answers
+					will penalize your score/time by ten seconds!
+				</p>
+				<ul id="choicesUl"></ul>
+				<!-- Button that begins the quiz. -->
+				<button id="startTime">Start Quiz</button>
+			</section>
+		</section>
+		<script src="./assets/js/questions.js"></script>
+	</body>
+</html>
