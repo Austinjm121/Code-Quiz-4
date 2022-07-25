@@ -62,7 +62,7 @@ holdInterval = setInterval(function () {
 
 secondsLeft--;
 
-currentTime.textContent = "Time: " + secondsLeft;
+quizPace.textContent = "Time: " + secondsLeft;
 
 
 if (secondsLeft <= 0) {
@@ -71,7 +71,7 @@ clearInterval(holdInterval);
 
 allDone();
 
-currentTime.textContent = "Time's up!";
+quizPace.textContent = "Time's up!";
 
 }
 
