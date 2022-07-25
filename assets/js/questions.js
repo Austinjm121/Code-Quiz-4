@@ -52,6 +52,37 @@ var questions = [{
    },
 ];
 
+// timer on button
+
+timer.addEventListener("click", function () {
+
+if (holdInterval === 0) {
+
+holdInterval = setInterval(function () {
+
+secondsLeft--;
+
+currentTime.textContent = "Time: " + secondsLeft;
+
+
+if (secondsLeft <= 0) {
+
+clearInterval(holdInterval);
+
+allDone();
+
+currentTime.textContent = "Time's up!";
+
+}
+
+}, 1000);
+
+}
+
+render(questionPage);
+
+});
+
 // Renders questions and choices to page: 
 function render(questionPage) {
    // Clears and existing data if there is any 
@@ -124,11 +155,11 @@ function endQuiz() {
    quizPace.innerHTML = "";
 
    // Heading for the finished quiz screen
-   var createH1 = document.createElement("h1");
-   createH1.setAttribute("id", "createH1");
-   createH1.textContent = "All Done!"
+   var buildH1 = document.createElement("h1");
+   buildH1.setAttribute("id", "buildH1");
+   buildH1.textContent = "All Done!"
 
-   questionsSection.appendChild(createH1);
+   questionsSection.appendChild(buildH1);
 
    // Paragraph for the finished quiz screen
    var buildP = document.createElement("p");
